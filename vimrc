@@ -9,10 +9,6 @@
 " Desc: simple vim config for server, without any plugins.
 "==========================================
 
-" leader
-let mapleader = ','
-let g:mapleader = ','
-
 " syntax
 syntax on
 
@@ -24,7 +20,6 @@ filetype on
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
-
 
 " base
 set nocompatible                " don't bother with vi compatibility
@@ -43,12 +38,11 @@ set tm=500
 
 
 " show location
-set cursorcolumn
+"   set cursorcolumn
 set cursorline
 
-
 " movement
-set scrolloff=7                 " keep 3 lines when scrolling
+set scrolloff=6                 " keep 6 lines when scrolling
 
 
 " show
@@ -104,6 +98,7 @@ set ffs=unix,dos,mac
 set formatoptions+=m
 set formatoptions+=B
 
+
 " select & complete
 set selection=inclusive
 set selectmode=mouse,key
@@ -112,6 +107,7 @@ set completeopt=longest,menu
 set wildmenu                           " show a navigable menu for tab completion"
 set wildmode=longest,list,full
 set wildignore=*.o,*~,*.pyc,*.class
+
 
 " others
 set backspace=indent,eol,start  " make that backspace key work the way it should
@@ -256,34 +252,14 @@ cnoremap <C-e> <End>
 
 " 关闭 vim 错误提示音
 set noeb
-set vb t 
+
 " 括号自动补全 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Parenthesis/bracket
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vnoremap $1 <esc>`>a)<esc>`<i(<esc>
-vnoremap $2 <esc>`>a]<esc>`<i[<esc>
-" vnoremap $3 <esc>`>a}<esc>`<i{<esc>
-vnoremap $$ <esc>`>a"<esc>`<i"<esc>
-vnoremap $q <esc>`>a'<esc>`<i'<esc>
-vnoremap $e <esc>`>a`<esc>`<i`<esc>
-
-
-" Map auto complete of (, ", ', [, {
-
-""" imap ( ()<Left>
-""" imap [ []<Left>
-
+imap ( ()<Left>
+imap [ []<Left>
 inoremap {<CR> {}<Left><CR><Tab><CR><Esc><Up><S-A>
-""" inoremap " ""<Left>
-""" inoremap ' ''<Left>
-
-set scrolloff=5
-
-inoremap $1 ()<esc>i
-inoremap $2 []<esc>i
-" inoremap { {}<Esc>i<CR><Esc>koi<Esc>j<C-S-v><S-%>=j<S-$>xa
-" inoremap $4 {<esc>o}<esc>O
-inoremap $q ''<esc>i
-inoremap $e ""<esc>i
+inoremap " ""<Left>
+inoremap ' ''<Left>

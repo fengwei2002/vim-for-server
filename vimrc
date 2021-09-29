@@ -1,12 +1,11 @@
 "==========================================
 " ProjectLink: https://github.com/wklken/vim-for-server
-" Author:  wklken
-" Version: 0.2
-" Email: wklken@yeah.net
-" BlogPost: http://www.wklken.me
-" Donation: http://www.wklken.me/pages/donation.html
+" Author:  fengwei2002
+" Version: 0.3
+" Email: konng_0120@qq.com
+" github: https://github.com/fengwei2002
 " ReadMe: README.md
-" Last_modify: 2015-07-07
+" Last_modify: 2021-09-29
 " Desc: simple vim config for server, without any plugins.
 "==========================================
 
@@ -254,3 +253,37 @@ cnoremap <C-j> <t_kd>
 cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+
+" 关闭 vim 错误提示音
+set noeb
+set vb t 
+" 括号自动补全 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Parenthesis/bracket
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vnoremap $1 <esc>`>a)<esc>`<i(<esc>
+vnoremap $2 <esc>`>a]<esc>`<i[<esc>
+" vnoremap $3 <esc>`>a}<esc>`<i{<esc>
+vnoremap $$ <esc>`>a"<esc>`<i"<esc>
+vnoremap $q <esc>`>a'<esc>`<i'<esc>
+vnoremap $e <esc>`>a`<esc>`<i`<esc>
+
+
+" Map auto complete of (, ", ', [, {
+
+""" imap ( ()<Left>
+""" imap [ []<Left>
+
+inoremap {<CR> {}<Left><CR><Tab><CR><Esc><Up><S-A>
+""" inoremap " ""<Left>
+""" inoremap ' ''<Left>
+
+set scrolloff=5
+
+inoremap $1 ()<esc>i
+inoremap $2 []<esc>i
+" inoremap { {}<Esc>i<CR><Esc>koi<Esc>j<C-S-v><S-%>=j<S-$>xa
+" inoremap $4 {<esc>o}<esc>O
+inoremap $q ''<esc>i
+inoremap $e ""<esc>i

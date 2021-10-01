@@ -263,3 +263,13 @@ imap [ []<Left>
 inoremap {<CR> {}<Left><CR><Tab><CR><Esc><Up><S-A>
 inoremap " ""<Left>
 inoremap ' ''<Left>
+
+set cursorcolumn  "or set cuc 设置光标所在的列
+set cursorline    "or set cul 设置光标所在的行
+" cterm 表示原生vim设置央视, 设置为NONE表示可以自定义设置
+" red（红），white（白），black（黑），green（绿），yellow（黄），blue（蓝），purple（紫），
+" gray（灰），brown（棕），tan(褐色)，syan(青色)
+" 更多高亮颜色设置, 可以:h highlight 查看manual
+highlight CursorLine   cterm=NONE ctermbg=black ctermfg=NONE guibg=NONE guifg=NONE
+highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+         

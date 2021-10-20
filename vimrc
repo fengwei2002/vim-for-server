@@ -253,13 +253,13 @@ set noeb
 " 括号自动补全 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Parenthesis/bracket
+" => Parenthesis/bracket 括号自动匹配，需要可以手动去除注释符号开启
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-imap ( ()<Left>
-imap [ []<Left>
+" imap ( ()<Left>
+" imap [ []<Left>
 inoremap {<CR> {}<Left><CR><Tab><CR><Esc><Up><S-A>
-inoremap " ""<Left>
-inoremap ' ''<Left>
+" inoremap " ""<Left>
+" inoremap ' ''<Left>
 
 set cursorcolumn  "or set cuc 设置光标所在的列
 set cursorline    "or set cul 设置光标所在的行

@@ -257,7 +257,7 @@ set noeb
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " imap ( ()<Left>
 " imap [ []<Left>
-inoremap {<CR> {}<Left><CR><Tab><CR><Esc><Up><S-A>
+" inoremap {<CR> {}<Left><CR><Tab><CR><Esc><Up><S-A>
 " inoremap " ""<Left>
 " inoremap ' ''<Left>
 

@@ -269,3 +269,5 @@ set cursorline    "or set cul 设置光标所在的行
 " 更多高亮颜色设置, 可以:h highlight 查看manual
 highlight CursorLine   cterm=NONE ctermbg=red ctermfg=white guibg=NONE guifg=NONE
 highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+
+set noswapfile

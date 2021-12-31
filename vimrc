@@ -271,3 +271,6 @@ highlight CursorLine   cterm=NONE ctermbg=red ctermfg=white guibg=NONE guifg=NON
 highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 
 set noswapfile
+set mouse=a
+
+

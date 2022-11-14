@@ -1,8 +1,7 @@
 "==========================================
-" ProjectLink: https://github.com/wklken/vim-for-server
 " Email: konng_0120@qq.com
 " github: https://github.com/fengwei2002
-" Last_modify: 2021-09-29
+" Last_modify: 2022 11 14
 " Desc: simple vim config for server, without any plugins.
 "==========================================
 
@@ -29,8 +28,6 @@ set nobackup                    " do not keep a backup file
 
 set novisualbell                " turn off visual bell
 set noerrorbells                " don't beep
-set visualbell t_vb=            " turn off error beep/flash
-set t_vb=
 set tm=500
 
 
@@ -124,7 +121,6 @@ endif
 
 " theme
 set background=dark
-colorscheme desert
 
 " set mark column color
 hi! link SignColumn   LineNr
@@ -170,16 +166,7 @@ endfun
 
 " ============================ key map ============================
 
-nnoremap k gk
-nnoremap gk k
-nnoremap j gj
-nnoremap gj j
-
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
+nnoremap <F1> :w !clip.exe<CR>
 nnoremap <F2> :set nu! nu?<CR>
 nnoremap <F3> :set list! list?<CR>
 nnoremap <F4> :set wrap! wrap?<CR>
@@ -188,6 +175,7 @@ set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
                                 "    that won't be autoindented
 au InsertLeave * set nopaste
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
+nnoremap <F7> :w !clip.exe<CR><CR>
 
 " kj 替换 Esc
 inoremap kj <Esc>
@@ -197,21 +185,8 @@ nnoremap <leader>q :q<CR>
 " Quickly save the current file
 nnoremap <leader>w :w<CR>
 
-" select all
-map <Leader>sa ggVG"
-
 " remap U to <C-r> for easier redo
 nnoremap U <C-r>
-
-" Swap implementations of ` and ' jump to markers
-" By default, ' jumps to the marked line, ` jumps to the marked line and
-" column, so swap them
-nnoremap ' `
-nnoremap ` '
-
-" switch # *
-" nnoremap # *
-" nnoremap * #
 
 "Keep search pattern at the center of the screen."
 nnoremap <silent> n nzz
@@ -242,35 +217,30 @@ nnoremap L $
 cmap w!! w !sudo tee >/dev/null %
 
 " command mode, ctrl-a to head， ctrl-e to tail
-cnoremap <C-j> <t_kd>
-cnoremap <C-k> <t_ku>
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
+" cnoremap <C-j> <t_kd>
+" cnoremap <C-k> <t_ku>
+" cnoremap <C-a> <Home>
+" cnoremap <C-e> <End>
 
-" 关闭 vim 错误提示音
 set noeb
 
-" 括号自动补全 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Parenthesis/bracket 括号自动匹配，需要可以手动去除注释符号开启
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" imap ( ()<Left>
-" imap [ []<Left>
-" inoremap {<CR> {}<Left><CR><Tab><CR><Esc><Up><S-A>
-" inoremap " ""<Left>
-" inoremap ' ''<Left>
-
-set cursorcolumn  "or set cuc 设置光标所在的列
+" set cursorcolumn  "or set cuc 设置光标所在的列
 set cursorline    "or set cul 设置光标所在的行
-" cterm 表示原生vim设置央视, 设置为NONE表示可以自定义设置
+" cterm 表示原生 vim 设置样式, 设置为 NONE 表示可以自定义设置
 " red（红），white（白），black（黑），green（绿），yellow（黄），blue（蓝），purple（紫），
 " gray（灰），brown（棕），tan(褐色)，syan(青色)
+
 " 更多高亮颜色设置, 可以:h highlight 查看manual
-highlight CursorLine   cterm=NONE ctermbg=red ctermfg=white guibg=NONE guifg=NONE
+highlight CursorLine   cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 highlight CursorColumn cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 
 set noswapfile
 set mouse=a
+" colorscheme at
+colorscheme om
 
+set shortmess=a
+set cmdheight=2
 
+map <C-c> :s/^/\/\//<Enter>
+map <C-u> :s/^\/\///<Enter>

@@ -1,7 +1,6 @@
 " funcdfs@gmail.com
 " china
 " version1: 2024-09-22 night:01:29
-" 
 
 " ============================ key map ============================
 
@@ -53,7 +52,7 @@ nnoremap <leader>q :q<CR>
 " Quickly save the current file
 nnoremap <leader>w :w<CR>
 " Quickly copy all content
-map <Leader>v ggVG
+map <Leader>c ggVG"+y
 map <Leader>y ggyG
 " Quickly delete all content
 map <Leader>d ggdG

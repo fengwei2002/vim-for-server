@@ -1,10 +1,10 @@
 " funcdfs@gmail.com
-" china
+" github.com/funcdfs
+" 2024-09-24
 
 " ============================ key map ============================
-" 
-"
-"
+
+
 " nnoremap <F1> :w !clip.exe<CR>
 " nnoremap <F2> :set nu! nu?<CR>
 " nnoremap <F3> :set list! list?<CR>
@@ -29,7 +29,7 @@ inoremap <nowait> kj <ESC>
 
 set timeout
 set ttimeout
-set timeoutlen=700
+set timeoutlen=500
 set ttimeoutlen=10
 
 " bracket jump 

@@ -48,7 +48,7 @@ nnoremap L $
 vnoremap H ^
 vnoremap L $
 " in waiting such as dL
-onoremap h ^
+onoremap H ^
 onoremap L $
 " in select
 xnoremap H ^
@@ -221,3 +221,4 @@ hi! link ShowMarksHLu DiffChange
 " status line
 set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 set laststatus=2   " Always show the status line - use 2 lines for the status bar
+

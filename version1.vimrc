@@ -1,6 +1,5 @@
 " funcdfs@gmail.com
 " github.com/funcdfs
-" 2024-09-24
 
 " ============================ key map ============================
 
@@ -13,8 +12,8 @@
 " au InsertLeave * set nopaste 
 " nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 " nnoremap <F7> :w !clip.exe<CR><CR>
-" kj for Esc
 
+" kj for Esc
 let g:esc_k_lasttime = 0
 let g:esc_j_lasttime = 0
 function! KJescape(key)
@@ -58,6 +57,7 @@ xnoremap L $
 " Map ; to : and save a million keystrokes
 " if in very fast typing, this will may make a lots of eroor touch
 " nnoremap ; :
+
 
 " leader key is '\' 
 " Quickly close the current window
@@ -128,7 +128,7 @@ set tm=500
 set cursorline
 
 " movement
-set scrolloff=8                 " keep 8 lines when scrolling
+set scrolloff=11                 " keep 8 lines when scrolling
 
 
 " show
